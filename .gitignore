@@ -1,0 +1,13 @@
+/target
+/logs
+.classpath
+.project
+.settings
+*.swp
+test-files/*
+test/logs*/
+test/data/*
+**/jmxremote.*
+*.egg-info
+*.pyc
+*.egg

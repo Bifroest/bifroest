@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<Configuration monitorInterval="60" shutdownHook="disable">
+    <Appenders>
+        <File append="true" fileName="test/logs/info_log" name="info">
+            <PatternLayout pattern="%d{ISO8601}{Europe/Berlin} | %c{1.} | %X | %highlight{%level}{Logback} | %m%n"/>
+            <Filters>
+                <MarkerFilter marker="PARTIAL_HIT" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="info"/>
+            </Filters>
+        </File>
+        <Console name="info_console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{ISO8601}{Europe/Berlin} | %c{1.} | %X | %highlight{%level}{Logback} | %m%n"/>
+            <Filters>
+                <MarkerFilter marker="PARTIAL_HIT" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="info"/>
+            </Filters>
+        </Console>
+        <File append="true" fileName="test/logs/debug_log" name="debug">
+            <PatternLayout pattern="%d{ISO8601}{Europe/Berlin} | %c{1.} | %X | %highlight{%level}{Logback} | %m%n"/>
+            <Filters>
+                <MarkerFilter marker="PARTIAL_HIT" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="debug"/>
+            </Filters>
+        </File>
+        <File append="true" fileName="test/logs/trace_log" name="trace">
+            <PatternLayout pattern="%d{ISO8601}{Europe/Berlin} | %c{1.} | %X | %highlight{%level}{Logback} | %m%n"/>
+            <Filters>
+                <MarkerFilter marker="PARTIAL_HIT" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="trace"/>
+            </Filters>
+        </File>
+        <File append="true" fileName="test/logs/machine-readable/partialhit_log" name="partial_hits">
+            <PatternLayout pattern="%d{ISO8601}{Europe/Berlin} | %c{1.} | %X | %highlight{%level}{Logback} | %m%n"/>
+            <Filters>
+                <MarkerFilter marker="PARTIAL_HIT" onMatch="ACCEPT" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="trace" onMatch="DENY" onMismatch="DENY"/>
+            </Filters>
+        </File>
+        <File append="true" fileName="test/logs/event_log" name="event_file">
+            <PatternLayout pattern="%d{ISO8601}{Europe/Berlin} | %c{1.} | %X | %highlight{%level}{Logback} | %m%n"/>
+            <Filters>
+                <MarkerFilter marker="EVENT_MARKER" onMatch="ACCEPT" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="trace" onMatch="DENY" onMismatch="DENY"/>
+            </Filters>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level="debug">
+            <AppenderRef ref="partial_hits"/>
+            <AppenderRef ref="event_file"/>
+            <AppenderRef ref="info"/>
+            <AppenderRef ref="info_console"/>
+            <AppenderRef ref="debug"/>
+            <AppenderRef ref="trace"/>
+        </Root>
+        <Logger level="trace" name="com.goodgame.profiling.drains.debug.DebugLoggingDrain"/>
+        <Logger level="trace" name="com.goodgame.profiling.rewrite_framework.core.DecoratorFactory"/>
+        <Logger level="trace" name="com.goodgame.profiling.commons.decorating_factories"/>
+        <Logger level="trace" name="com.goodgame.profiling.graphite_bifroest.metric_cache.LevelCache"/>
+        <Logger level="debug" name="com.goodgame.profiling.graphite_bifroest.metric_cache.MetricCacheSystem"/>
+        <Logger level="trace" name="com.goodgame.profiling.graphite_bifroest.metric_cache.MetricCache"/>
+        <Logger level="trace" name="com.goodgame.profiling.graphite_bifroest.metric_cache.OneMetricCache"/>
+	<Logger level="trace" name="com.goodgame.profiling.graphite_bifroest.commands.GetValueCommand"/>
+	<Logger level="trace" name="com.goodgame.profiling.graphite_bifroest.metric_cache.OneMetricCache"/>
+	 <Logger level="trace" name="com.goodgame.profiling.graphite_bifroest.commands.IncludeMetrics"/>
+	 <Logger level="trace" name="com.goodgame.profiling.graphite_bifroest.metric_cache.eviction_strategy"/>
+    </Loggers>
+</Configuration>

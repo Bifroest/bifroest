@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="off" monitorInterval="300" shutdownHook="disable">
+    <Appenders>
+        <Console name="info_console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{ISO8601}{Europe/Berlin} | %c{1.} | %highlight{%level{}}{Logback} | %m%n"></PatternLayout>
+            <ThresholdFilter level="info"/>
+        </Console>
+        <File name="debug_file" fileName="logs/debug_log" append="false">
+            <PatternLayout pattern="%d{ISO8601}{Europe/Berlin} | %c{1.} | %highlight{%level{}}{Logback} | %m%n"></PatternLayout>
+            <ThresholdFilter level="debug"/>
+        </File>
+        <File name="trace_file" fileName="logs/trace_log" append="false">
+            <PatternLayout pattern="%d{ISO8601}{Europe/Berlin} | %c{1.} | %highlight{%level{}}{Logback} | %m%n"></PatternLayout>
+            <ThresholdFilter level="trace"/>
+        </File>
+        <File name="event_file" fileName="logs/event_log" append="false">
+            <PatternLayout pattern="%d{ISO8601}{Europe/Berlin} | %c{1.} | %highlight{%level{}}{Logback} | %m%n"></PatternLayout>
+            <filters>
+                <MarkerFilter marker="EVENT_MARKER" onMatch="ACCEPT" onMismatch="DENY"/>
+            </filters>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level="debug">
+            <AppenderRef ref="info_console" />
+            <AppenderRef ref="debug_file" />
+            <AppenderRef ref="trace_file" />
+            <AppenderRef ref="event_file" />
+        </Root>
+	<Logger name="com.goodgame.profiling.graphite_bifroest.systems.cassandra.wrapper" level="trace" />
+    </Loggers>
+</Configuration>
