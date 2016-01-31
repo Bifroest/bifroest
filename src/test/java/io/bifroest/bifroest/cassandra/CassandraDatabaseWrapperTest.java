@@ -59,8 +59,7 @@ public class CassandraDatabaseWrapperTest {
     @Before
     public void createMocks() {
         MockitoAnnotations.initMocks( this );
-        long timestamp = System.currentTimeMillis() / 1000;
-
+        long timestamp = 1000000000;
         when(environment.retentions()).thenReturn(retentionConfig);
 
         cassandra = new CassandraDatabaseWrapper<>( database, environment );
