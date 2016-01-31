@@ -1,4 +1,4 @@
-package com.goodgame.profiling.graphite_bifroest.systems.prefixtree;
+package io.bifroest.bifroest.systems.prefixtree;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;

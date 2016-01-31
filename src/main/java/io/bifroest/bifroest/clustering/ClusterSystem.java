@@ -1,4 +1,4 @@
-package com.goodgame.profiling.graphite_bifroest.clustering;
+package io.bifroest.bifroest.clustering;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -12,13 +12,13 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.kohsuke.MetaInfServices;
 
-import com.goodgame.profiling.bifroest.bifroest_client.metadata.PortMap;
-import com.goodgame.profiling.bifroest.bifroest_client.seeds.HostPortPair;
-import com.goodgame.profiling.commons.boot.interfaces.Subsystem;
-import com.goodgame.profiling.commons.statistics.units.parse.DurationParser;
-import com.goodgame.profiling.commons.systems.SystemIdentifiers;
-import com.goodgame.profiling.graphite_bifroest.metric_cache.EnvironmentWithMetricCache;
-import com.goodgame.profiling.graphite_bifroest.systems.BifroestIdentifiers;
+import io.bifroest.bifroest_client.metadata.PortMap;
+import io.bifroest.bifroest_client.seeds.HostPortPair;
+import io.bifroest.commons.boot.interfaces.Subsystem;
+import io.bifroest.commons.statistics.units.parse.DurationParser;
+import io.bifroest.bifroest.metric_cache.EnvironmentWithMetricCache;
+import io.bifroest.bifroest.systems.BifroestIdentifiers;
+import io.bifroest.commons.SystemIdentifiers;
 
 
 @MetaInfServices

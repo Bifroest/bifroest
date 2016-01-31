@@ -1,4 +1,4 @@
-package com.goodgame.profiling.graphite_bifroest.systems.cassandra;
+package io.bifroest.bifroest.systems.cassandra;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -22,10 +22,10 @@ import com.datastax.driver.core.Statement;
 import com.datastax.driver.core.TableMetadata;
 import com.datastax.driver.core.querybuilder.Clause;
 import com.datastax.driver.core.querybuilder.QueryBuilder;
-import com.goodgame.profiling.commons.model.Interval;
-import com.goodgame.profiling.commons.model.Metric;
-import com.goodgame.profiling.graphite_retentions.RetentionTable;
-import com.goodgame.profiling.graphite_retentions.bootloader.EnvironmentWithRetentionStrategy;
+import io.bifroest.commons.model.Interval;
+import io.bifroest.commons.model.Metric;
+import io.bifroest.retentions.RetentionTable;
+import io.bifroest.retentions.bootloader.EnvironmentWithRetentionStrategy;
 
 public class CassandraDatabase< E extends EnvironmentWithRetentionStrategy > {
 

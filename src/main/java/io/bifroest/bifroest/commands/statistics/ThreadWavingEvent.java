@@ -1,10 +1,10 @@
-package com.goodgame.profiling.graphite_bifroest.commands.statistics;
+package io.bifroest.bifroest.commands.statistics;
 
 import java.time.Clock;
 import java.time.Instant;
 
-import com.goodgame.profiling.commons.statistics.commands.EventWithThreadId;
-import com.goodgame.profiling.commons.statistics.EventWithInstant;
+import io.bifroest.commons.statistics.commands.EventWithThreadId;
+import io.bifroest.commons.statistics.EventWithInstant;
 
 public abstract class ThreadWavingEvent implements EventWithThreadId,EventWithInstant {
     private final Instant when;

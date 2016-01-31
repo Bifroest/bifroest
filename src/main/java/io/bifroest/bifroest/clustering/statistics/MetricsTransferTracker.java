@@ -1,10 +1,10 @@
-package com.goodgame.profiling.graphite_bifroest.clustering.statistics;
+package io.bifroest.bifroest.clustering.statistics;
 
 import org.kohsuke.MetaInfServices;
 
-import com.goodgame.profiling.commons.statistics.WriteToStorageEvent;
-import com.goodgame.profiling.commons.statistics.eventbus.EventBusManager;
-import com.goodgame.profiling.commons.statistics.gathering.StatisticGatherer;
+import io.bifroest.commons.statistics.WriteToStorageEvent;
+import io.bifroest.commons.statistics.eventbus.EventBusManager;
+import io.bifroest.commons.statistics.gathering.StatisticGatherer;
 
 @MetaInfServices
 public class MetricsTransferTracker implements StatisticGatherer {

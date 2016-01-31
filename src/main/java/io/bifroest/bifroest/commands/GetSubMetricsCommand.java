@@ -1,4 +1,4 @@
-package com.goodgame.profiling.graphite_bifroest.commands;
+package io.bifroest.bifroest.commands;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -15,13 +15,13 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.kohsuke.MetaInfServices;
 
-import com.goodgame.profiling.commons.statistics.DirectProgramStateTracker;
-import com.goodgame.profiling.commons.statistics.WriteToStorageEvent;
-import com.goodgame.profiling.commons.statistics.eventbus.EventBusManager;
-import com.goodgame.profiling.commons.systems.net.jsonserver.Command;
-import com.goodgame.profiling.graphite_bifroest.commands.submetrics.QueryParser;
-import com.goodgame.profiling.graphite_bifroest.systems.BifroestIdentifiers;
-import com.goodgame.profiling.graphite_bifroest.systems.prefixtree.EnvironmentWithPrefixTree;
+import io.bifroest.commons.statistics.DirectProgramStateTracker;
+import io.bifroest.commons.statistics.WriteToStorageEvent;
+import io.bifroest.commons.statistics.eventbus.EventBusManager;
+import io.bifroest.bifroest.commands.submetrics.QueryParser;
+import io.bifroest.bifroest.systems.BifroestIdentifiers;
+import io.bifroest.bifroest.systems.prefixtree.EnvironmentWithPrefixTree;
+import io.bifroest.commons.net.jsonserver.Command;
 
 @MetaInfServices
 public class GetSubMetricsCommand< E extends EnvironmentWithPrefixTree > implements Command<E> {

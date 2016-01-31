@@ -1,4 +1,4 @@
-package com.goodgame.profiling.graphite_bifroest.systems.cassandra;
+package io.bifroest.bifroest.systems.cassandra;
 
 import java.time.Clock;
 import java.time.Duration;
@@ -10,15 +10,15 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import com.goodgame.profiling.commons.model.Interval;
-import com.goodgame.profiling.commons.model.Metric;
-import com.goodgame.profiling.commons.statistics.aggregation.ValueAggregation;
-import com.goodgame.profiling.graphite_bifroest.systems.cassandra.CassandraDatabase;
-import com.goodgame.profiling.graphite_bifroest.systems.cassandra.wrapper.CassandraDatabaseWrapper;
-import com.goodgame.profiling.graphite_retentions.RetentionConfiguration;
-import com.goodgame.profiling.graphite_retentions.RetentionLevel;
-import com.goodgame.profiling.graphite_retentions.RetentionTable;
-import com.goodgame.profiling.graphite_retentions.bootloader.EnvironmentWithRetentionStrategy;
+import io.bifroest.commons.model.Interval;
+import io.bifroest.commons.model.Metric;
+import io.bifroest.commons.statistics.aggregation.ValueAggregation;
+import io.bifroest.bifroest.systems.cassandra.CassandraDatabase;
+import io.bifroest.bifroest.systems.cassandra.wrapper.CassandraDatabaseWrapper;
+import io.bifroest.retentions.RetentionConfiguration;
+import io.bifroest.retentions.RetentionLevel;
+import io.bifroest.retentions.RetentionTable;
+import io.bifroest.retentions.bootloader.EnvironmentWithRetentionStrategy;
 
 public final class CassandraDatabasePerformanceTest {
     private static final String cassandraSeed = "cassandra01.bifroest.nl.ggs-net.com";

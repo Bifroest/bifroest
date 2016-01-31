@@ -1,4 +1,4 @@
-package com.goodgame.profiling.graphite_bifroest.drain;
+package io.bifroest.bifroest.drain;
 
 import java.io.IOException;
 import java.util.List;
@@ -6,12 +6,12 @@ import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.goodgame.profiling.bifroest.bifroest_client.metadata.NodeMetadata;
-import com.goodgame.profiling.commons.model.Metric;
-import com.goodgame.profiling.drains.AbstractBasicDrain;
-import com.goodgame.profiling.graphite_bifroest.clustering.BifroestClustering;
-import com.goodgame.profiling.graphite_bifroest.commands.statistics.DroppedMetricsEvent;
-import com.goodgame.profiling.graphite_bifroest.systems.BifroestEnvironment;
+import io.bifroest.bifroest_client.metadata.NodeMetadata;
+import io.bifroest.commons.model.Metric;
+import io.bifroest.drains.AbstractBasicDrain;
+import io.bifroest.bifroest.clustering.BifroestClustering;
+import io.bifroest.bifroest.commands.statistics.DroppedMetricsEvent;
+import io.bifroest.bifroest.systems.BifroestEnvironment;
 
 
 public class TreeAndCacheDrain extends AbstractBasicDrain {

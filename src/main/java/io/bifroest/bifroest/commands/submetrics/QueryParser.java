@@ -1,4 +1,4 @@
-package com.goodgame.profiling.graphite_bifroest.commands.submetrics;
+package io.bifroest.bifroest.commands.submetrics;
 
 import java.util.ArrayList;
 import java.util.List;

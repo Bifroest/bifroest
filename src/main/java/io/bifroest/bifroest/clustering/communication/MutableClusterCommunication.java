@@ -1,9 +1,9 @@
-package com.goodgame.profiling.graphite_bifroest.clustering.communication;
+package io.bifroest.bifroest.clustering.communication;
 
 import java.io.IOException;
 import java.util.Collection;
 
-import com.goodgame.profiling.bifroest.bifroest_client.metadata.NodeMetadata;
+import io.bifroest.bifroest_client.metadata.NodeMetadata;
 
 public interface MutableClusterCommunication extends ClusterCommunication {
     void connectAndIntroduceTo( NodeMetadata newNode ) throws IOException;

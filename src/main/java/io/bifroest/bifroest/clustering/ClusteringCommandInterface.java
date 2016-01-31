@@ -1,10 +1,10 @@
-package com.goodgame.profiling.graphite_bifroest.clustering;
+package io.bifroest.bifroest.clustering;
 
 import java.util.Collection;
 import java.util.concurrent.Future;
 
-import com.goodgame.profiling.bifroest.balancing.BucketMapping;
-import com.goodgame.profiling.bifroest.bifroest_client.metadata.NodeMetadata;
+import io.bifroest.balancing.BucketMapping;
+import io.bifroest.bifroest_client.metadata.NodeMetadata;
 
 public interface ClusteringCommandInterface {
     void buildANewClusterSoon();

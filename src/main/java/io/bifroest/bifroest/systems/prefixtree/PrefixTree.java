@@ -1,4 +1,4 @@
-package com.goodgame.profiling.graphite_bifroest.systems.prefixtree;
+package io.bifroest.bifroest.systems.prefixtree;
 
 import java.time.Clock;
 import java.time.Instant;
@@ -21,7 +21,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.json.JSONObject;
 
-import com.goodgame.profiling.commons.statistics.ProgramStateChanged;
+import io.bifroest.commons.statistics.ProgramStateChanged;
 
 public final class PrefixTree {
     private static final Logger log = LogManager.getLogger();

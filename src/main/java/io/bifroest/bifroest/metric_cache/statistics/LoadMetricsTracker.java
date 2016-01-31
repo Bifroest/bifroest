@@ -1,11 +1,11 @@
-package com.goodgame.profiling.graphite_bifroest.metric_cache.statistics;
+package io.bifroest.bifroest.metric_cache.statistics;
 
 import org.kohsuke.MetaInfServices;
 
-import com.goodgame.profiling.commons.statistics.WriteToStorageEvent;
-import com.goodgame.profiling.commons.statistics.eventbus.EventBusManager;
-import com.goodgame.profiling.commons.statistics.gathering.StatisticGatherer;
-import com.goodgame.profiling.commons.statistics.storage.MetricStorage;
+import io.bifroest.commons.statistics.WriteToStorageEvent;
+import io.bifroest.commons.statistics.eventbus.EventBusManager;
+import io.bifroest.commons.statistics.gathering.StatisticGatherer;
+import io.bifroest.commons.statistics.storage.MetricStorage;
 
 @MetaInfServices
 public final class LoadMetricsTracker implements StatisticGatherer {

@@ -1,4 +1,4 @@
-package com.goodgame.profiling.graphite_bifroest.commands.clustering;
+package io.bifroest.bifroest.commands.clustering;
 
 import java.util.Collections;
 import java.util.List;
@@ -7,9 +7,9 @@ import org.apache.commons.lang3.tuple.Pair;
 import org.json.JSONObject;
 import org.kohsuke.MetaInfServices;
 
-import com.goodgame.profiling.bifroest.bifroest_client.metadata.ClusterState;
-import com.goodgame.profiling.commons.systems.net.jsonserver.Command;
-import com.goodgame.profiling.graphite_bifroest.clustering.EnvironmentWithClustering;
+import io.bifroest.bifroest_client.metadata.ClusterState;
+import io.bifroest.bifroest.clustering.EnvironmentWithClustering;
+import io.bifroest.commons.net.jsonserver.Command;
 
 @MetaInfServices
 public class GetKnownClusterStateCommand<E extends EnvironmentWithClustering> implements Command<E> {

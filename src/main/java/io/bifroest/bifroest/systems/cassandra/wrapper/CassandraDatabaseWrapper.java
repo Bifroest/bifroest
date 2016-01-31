@@ -1,4 +1,4 @@
-package com.goodgame.profiling.graphite_bifroest.systems.cassandra.wrapper;
+package io.bifroest.bifroest.systems.cassandra.wrapper;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -12,13 +12,13 @@ import java.util.stream.Stream;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.goodgame.profiling.commons.model.Interval;
-import com.goodgame.profiling.commons.model.Metric;
-import com.goodgame.profiling.graphite_bifroest.systems.cassandra.CassandraAccessLayer;
-import com.goodgame.profiling.graphite_bifroest.systems.cassandra.CassandraDatabase;
-import com.goodgame.profiling.graphite_retentions.RetentionLevel;
-import com.goodgame.profiling.graphite_retentions.RetentionTable;
-import com.goodgame.profiling.graphite_retentions.bootloader.EnvironmentWithRetentionStrategy;
+import io.bifroest.commons.model.Interval;
+import io.bifroest.commons.model.Metric;
+import io.bifroest.bifroest.systems.cassandra.CassandraAccessLayer;
+import io.bifroest.bifroest.systems.cassandra.CassandraDatabase;
+import io.bifroest.retentions.RetentionLevel;
+import io.bifroest.retentions.RetentionTable;
+import io.bifroest.retentions.bootloader.EnvironmentWithRetentionStrategy;
 
 public class CassandraDatabaseWrapper< E extends EnvironmentWithRetentionStrategy > implements CassandraAccessLayer {
     private static final Logger log = LogManager.getLogger();

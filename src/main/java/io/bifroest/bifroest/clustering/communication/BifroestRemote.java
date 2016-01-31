@@ -1,4 +1,4 @@
-package com.goodgame.profiling.graphite_bifroest.clustering.communication;
+package io.bifroest.bifroest.clustering.communication;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -18,15 +18,15 @@ import org.apache.logging.log4j.Logger;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import com.goodgame.profiling.bifroest.balancing.BucketMapping;
-import com.goodgame.profiling.bifroest.bifroest_client.metadata.ClusterState;
-import com.goodgame.profiling.bifroest.bifroest_client.metadata.MappingFactory;
-import com.goodgame.profiling.bifroest.bifroest_client.metadata.NodeMetadata;
-import com.goodgame.profiling.commons.systems.cron.TaskRunner;
-import com.goodgame.profiling.commons.systems.cron.TaskRunner.TaskID;
-import com.goodgame.profiling.graphite_bifroest.clustering.ClusteringCommandInterface;
-import com.goodgame.profiling.graphite_bifroest.clustering.statistics.AbandonedMetricsReceivedEvent;
-import com.goodgame.profiling.graphite_bifroest.clustering.statistics.TransferredMetricsReceivedEvent;
+import io.bifroest.balancing.BucketMapping;
+import io.bifroest.bifroest_client.metadata.ClusterState;
+import io.bifroest.bifroest_client.metadata.MappingFactory;
+import io.bifroest.bifroest_client.metadata.NodeMetadata;
+import io.bifroest.bifroest.clustering.ClusteringCommandInterface;
+import io.bifroest.bifroest.clustering.statistics.AbandonedMetricsReceivedEvent;
+import io.bifroest.bifroest.clustering.statistics.TransferredMetricsReceivedEvent;
+import io.bifroest.commons.cron.TaskRunner;
+import io.bifroest.commons.cron.TaskRunner.TaskID;
 
 public final class BifroestRemote {
     private static final Logger log = LogManager.getLogger();

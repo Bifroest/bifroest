@@ -1,4 +1,4 @@
-package com.goodgame.profiling.graphite_bifroest.clustering;
+package io.bifroest.bifroest.clustering;
 
 public interface EnvironmentWithMutableClustering extends EnvironmentWithClustering {
     void setClustering( BifroestClustering clustering );

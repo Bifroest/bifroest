@@ -1,4 +1,4 @@
-package com.goodgame.profiling.graphite_bifroest.systems.cassandra;
+package io.bifroest.bifroest.systems.cassandra;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -8,13 +8,13 @@ import org.kohsuke.MetaInfServices;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.goodgame.profiling.commons.boot.interfaces.Subsystem;
-import com.goodgame.profiling.commons.systems.SystemIdentifiers;
-import com.goodgame.profiling.commons.systems.configuration.EnvironmentWithJSONConfiguration;
-import com.goodgame.profiling.commons.util.json.JSONUtils;
-import com.goodgame.profiling.graphite_bifroest.systems.BifroestIdentifiers;
-import com.goodgame.profiling.graphite_bifroest.systems.cassandra.wrapper.CassandraDatabaseWrapper;
-import com.goodgame.profiling.graphite_retentions.bootloader.EnvironmentWithRetentionStrategy;
+import io.bifroest.commons.boot.interfaces.Subsystem;
+import io.bifroest.commons.util.json.JSONUtils;
+import io.bifroest.bifroest.systems.BifroestIdentifiers;
+import io.bifroest.bifroest.systems.cassandra.wrapper.CassandraDatabaseWrapper;
+import io.bifroest.commons.SystemIdentifiers;
+import io.bifroest.commons.configuration.EnvironmentWithJSONConfiguration;
+import io.bifroest.retentions.bootloader.EnvironmentWithRetentionStrategy;
 
 @MetaInfServices
 public class CassandraSystem< E extends EnvironmentWithJSONConfiguration & EnvironmentWithMutableCassandra & EnvironmentWithRetentionStrategy > implements

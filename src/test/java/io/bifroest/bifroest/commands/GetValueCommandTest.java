@@ -1,4 +1,4 @@
-package com.goodgame.profiling.graphite_bifroest.commands;
+package io.bifroest.bifroest.commands;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -20,24 +20,24 @@ import org.mockito.MockitoAnnotations;
 import org.mockito.invocation.InvocationOnMock;
 import org.mockito.stubbing.Answer;
 
-import com.goodgame.profiling.bifroest.bifroest_client.metadata.NodeMetadata;
-import com.goodgame.profiling.commons.model.Interval;
-import com.goodgame.profiling.commons.model.Metric;
-import com.goodgame.profiling.commons.statistics.aggregation.LastAggregation;
-import com.goodgame.profiling.commons.statistics.aggregation.ValueAggregation;
-import com.goodgame.profiling.graphite_bifroest.clustering.BifroestClustering;
-import com.goodgame.profiling.graphite_bifroest.clustering.EnvironmentWithClustering;
-import com.goodgame.profiling.graphite_bifroest.clustering.state.JSONObjectMatcher;
-import com.goodgame.profiling.graphite_bifroest.metric_cache.CachingConfiguration;
-import com.goodgame.profiling.graphite_bifroest.metric_cache.CachingLevel;
-import com.goodgame.profiling.graphite_bifroest.metric_cache.EnvironmentWithMetricCache;
-import com.goodgame.profiling.graphite_bifroest.metric_cache.MetricCache;
-import com.goodgame.profiling.graphite_bifroest.systems.cassandra.CassandraAccessLayer;
-import com.goodgame.profiling.graphite_bifroest.systems.cassandra.EnvironmentWithCassandra;
-import com.goodgame.profiling.graphite_retentions.Aggregator;
-import com.goodgame.profiling.graphite_retentions.RetentionConfiguration;
-import com.goodgame.profiling.graphite_retentions.RetentionLevel;
-import com.goodgame.profiling.graphite_retentions.bootloader.EnvironmentWithRetentionStrategy;
+import io.bifroest.bifroest_client.metadata.NodeMetadata;
+import io.bifroest.commons.model.Interval;
+import io.bifroest.commons.model.Metric;
+import io.bifroest.commons.statistics.aggregation.LastAggregation;
+import io.bifroest.commons.statistics.aggregation.ValueAggregation;
+import io.bifroest.bifroest.clustering.BifroestClustering;
+import io.bifroest.bifroest.clustering.EnvironmentWithClustering;
+import io.bifroest.bifroest.clustering.state.JSONObjectMatcher;
+import io.bifroest.bifroest.metric_cache.CachingConfiguration;
+import io.bifroest.bifroest.metric_cache.CachingLevel;
+import io.bifroest.bifroest.metric_cache.EnvironmentWithMetricCache;
+import io.bifroest.bifroest.metric_cache.MetricCache;
+import io.bifroest.bifroest.systems.cassandra.CassandraAccessLayer;
+import io.bifroest.bifroest.systems.cassandra.EnvironmentWithCassandra;
+import io.bifroest.retentions.Aggregator;
+import io.bifroest.retentions.RetentionConfiguration;
+import io.bifroest.retentions.RetentionLevel;
+import io.bifroest.retentions.bootloader.EnvironmentWithRetentionStrategy;
 
 public final class GetValueCommandTest {
 

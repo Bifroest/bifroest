@@ -1,4 +1,4 @@
-package com.goodgame.profiling.graphite_bifroest.metric_cache;
+package io.bifroest.bifroest.metric_cache;
 
 import java.time.Clock;
 import java.time.Duration;
@@ -15,13 +15,13 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.goodgame.profiling.commons.model.Interval;
-import com.goodgame.profiling.commons.model.Metric;
-import com.goodgame.profiling.commons.statistics.cache.CacheTracker;
-import com.goodgame.profiling.commons.statistics.jmx.MBeanManager;
-import com.goodgame.profiling.graphite_bifroest.systems.BifroestEnvironment;
-import com.goodgame.profiling.graphite_retentions.MetricSet;
-import com.goodgame.profiling.graphite_retentions.RetentionLevel;
+import io.bifroest.commons.model.Interval;
+import io.bifroest.commons.model.Metric;
+import io.bifroest.commons.statistics.cache.CacheTracker;
+import io.bifroest.commons.statistics.jmx.MBeanManager;
+import io.bifroest.bifroest.systems.BifroestEnvironment;
+import io.bifroest.retentions.MetricSet;
+import io.bifroest.retentions.RetentionLevel;
 
 public class LevelCache implements LevelCacheMBean {
     private final Logger log;

@@ -1,4 +1,4 @@
-package com.goodgame.profiling.graphite_bifroest.commands;
+package io.bifroest.bifroest.commands;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -16,23 +16,23 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.kohsuke.MetaInfServices;
 
-import com.goodgame.profiling.bifroest.bifroest_client.metadata.NodeMetadata;
-import com.goodgame.profiling.commons.model.Interval;
-import com.goodgame.profiling.commons.model.Metric;
-import com.goodgame.profiling.commons.statistics.DirectProgramStateTracker;
-import com.goodgame.profiling.commons.statistics.WriteToStorageEvent;
-import com.goodgame.profiling.commons.statistics.eventbus.EventBusManager;
-import com.goodgame.profiling.commons.systems.net.jsonserver.Command;
-import com.goodgame.profiling.graphite_bifroest.clustering.BifroestClustering;
-import com.goodgame.profiling.graphite_bifroest.clustering.EnvironmentWithClustering;
-import com.goodgame.profiling.graphite_bifroest.metric_cache.EnvironmentWithMetricCache;
-import com.goodgame.profiling.graphite_bifroest.systems.BifroestIdentifiers;
-import com.goodgame.profiling.graphite_bifroest.systems.cassandra.EnvironmentWithCassandra;
-import com.goodgame.profiling.graphite_retentions.Aggregator;
-import com.goodgame.profiling.graphite_retentions.MetricSet;
-import com.goodgame.profiling.graphite_retentions.RetentionConfiguration;
-import com.goodgame.profiling.graphite_retentions.RetentionLevel;
-import com.goodgame.profiling.graphite_retentions.bootloader.EnvironmentWithRetentionStrategy;
+import io.bifroest.bifroest_client.metadata.NodeMetadata;
+import io.bifroest.commons.model.Interval;
+import io.bifroest.commons.model.Metric;
+import io.bifroest.commons.statistics.DirectProgramStateTracker;
+import io.bifroest.commons.statistics.WriteToStorageEvent;
+import io.bifroest.commons.statistics.eventbus.EventBusManager;
+import io.bifroest.bifroest.clustering.BifroestClustering;
+import io.bifroest.bifroest.clustering.EnvironmentWithClustering;
+import io.bifroest.bifroest.metric_cache.EnvironmentWithMetricCache;
+import io.bifroest.bifroest.systems.BifroestIdentifiers;
+import io.bifroest.bifroest.systems.cassandra.EnvironmentWithCassandra;
+import io.bifroest.commons.net.jsonserver.Command;
+import io.bifroest.retentions.Aggregator;
+import io.bifroest.retentions.MetricSet;
+import io.bifroest.retentions.RetentionConfiguration;
+import io.bifroest.retentions.RetentionLevel;
+import io.bifroest.retentions.bootloader.EnvironmentWithRetentionStrategy;
 
 @MetaInfServices
 public final class GetValueCommand< E extends EnvironmentWithCassandra & EnvironmentWithRetentionStrategy & EnvironmentWithMetricCache & EnvironmentWithClustering > implements Command<E> {

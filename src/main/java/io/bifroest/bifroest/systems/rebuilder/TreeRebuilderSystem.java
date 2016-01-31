@@ -1,4 +1,4 @@
-package com.goodgame.profiling.graphite_bifroest.systems.rebuilder;
+package io.bifroest.bifroest.systems.rebuilder;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -20,22 +20,22 @@ import org.apache.logging.log4j.Logger;
 import org.json.JSONObject;
 import org.kohsuke.MetaInfServices;
 
-import com.goodgame.profiling.commons.boot.interfaces.Subsystem;
-import com.goodgame.profiling.commons.statistics.eventbus.EventBusManager;
-import com.goodgame.profiling.commons.statistics.units.SI_PREFIX;
-import com.goodgame.profiling.commons.statistics.units.TIME_UNIT;
-import com.goodgame.profiling.commons.statistics.units.parse.TimeUnitParser;
-import com.goodgame.profiling.commons.statistics.units.parse.UnitParser;
-import com.goodgame.profiling.commons.systems.SystemIdentifiers;
-import com.goodgame.profiling.commons.systems.configuration.EnvironmentWithJSONConfiguration;
-import com.goodgame.profiling.commons.util.json.JSONUtils;
-import com.goodgame.profiling.graphite_bifroest.systems.BifroestIdentifiers;
-import com.goodgame.profiling.graphite_bifroest.systems.cassandra.EnvironmentWithCassandra;
-import com.goodgame.profiling.graphite_bifroest.systems.prefixtree.EnvironmentWithMutablePrefixTree;
-import com.goodgame.profiling.graphite_bifroest.systems.prefixtree.PrefixTree;
-import com.goodgame.profiling.graphite_bifroest.systems.rebuilder.statistics.RebuildFinishedEvent;
-import com.goodgame.profiling.graphite_bifroest.systems.rebuilder.statistics.RebuildStartedEvent;
-import com.goodgame.profiling.graphite_retentions.bootloader.EnvironmentWithRetentionStrategy;
+import io.bifroest.commons.boot.interfaces.Subsystem;
+import io.bifroest.commons.statistics.eventbus.EventBusManager;
+import io.bifroest.commons.statistics.units.SI_PREFIX;
+import io.bifroest.commons.statistics.units.TIME_UNIT;
+import io.bifroest.commons.statistics.units.parse.TimeUnitParser;
+import io.bifroest.commons.statistics.units.parse.UnitParser;
+import io.bifroest.commons.util.json.JSONUtils;
+import io.bifroest.bifroest.systems.BifroestIdentifiers;
+import io.bifroest.bifroest.systems.cassandra.EnvironmentWithCassandra;
+import io.bifroest.bifroest.systems.prefixtree.EnvironmentWithMutablePrefixTree;
+import io.bifroest.bifroest.systems.prefixtree.PrefixTree;
+import io.bifroest.bifroest.systems.rebuilder.statistics.RebuildFinishedEvent;
+import io.bifroest.bifroest.systems.rebuilder.statistics.RebuildStartedEvent;
+import io.bifroest.commons.SystemIdentifiers;
+import io.bifroest.commons.configuration.EnvironmentWithJSONConfiguration;
+import io.bifroest.retentions.bootloader.EnvironmentWithRetentionStrategy;
 
 @MetaInfServices
 public class TreeRebuilderSystem< E extends EnvironmentWithJSONConfiguration & EnvironmentWithCassandra & EnvironmentWithMutablePrefixTree & EnvironmentWithMutableTreeRebuilder & EnvironmentWithRetentionStrategy >

@@ -1,10 +1,10 @@
-package com.goodgame.profiling.graphite_bifroest.metric_cache;
+package io.bifroest.bifroest.metric_cache;
 
 import java.util.concurrent.atomic.LongAdder;
 
-import com.goodgame.profiling.commons.statistics.WriteToStorageEvent;
-import com.goodgame.profiling.commons.statistics.eventbus.EventBusManager;
-import com.goodgame.profiling.commons.statistics.storage.MetricStorage;
+import io.bifroest.commons.statistics.WriteToStorageEvent;
+import io.bifroest.commons.statistics.eventbus.EventBusManager;
+import io.bifroest.commons.statistics.storage.MetricStorage;
 
 public class BackendPoolTracker {
     private LongAdder created = new LongAdder();

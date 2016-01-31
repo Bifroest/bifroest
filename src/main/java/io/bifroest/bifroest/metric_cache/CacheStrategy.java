@@ -1,6 +1,6 @@
-package com.goodgame.profiling.graphite_bifroest.metric_cache;
+package io.bifroest.bifroest.metric_cache;
 
-import com.goodgame.profiling.commons.model.Interval;
+import io.bifroest.commons.model.Interval;
 
 public interface CacheStrategy {
     boolean shouldICache( String metricName, Interval interval );

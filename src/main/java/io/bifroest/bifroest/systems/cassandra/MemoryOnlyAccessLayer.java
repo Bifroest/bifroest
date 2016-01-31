@@ -1,10 +1,10 @@
-package com.goodgame.profiling.graphite_bifroest.systems.cassandra;
+package io.bifroest.bifroest.systems.cassandra;
 
 import java.util.stream.Stream;
 
-import com.goodgame.profiling.commons.boot.interfaces.Environment;
-import com.goodgame.profiling.commons.model.Interval;
-import com.goodgame.profiling.commons.model.Metric;
+import io.bifroest.commons.boot.interfaces.Environment;
+import io.bifroest.commons.model.Interval;
+import io.bifroest.commons.model.Metric;
 
 
 public final class MemoryOnlyAccessLayer< E extends Environment > implements CassandraAccessLayer {

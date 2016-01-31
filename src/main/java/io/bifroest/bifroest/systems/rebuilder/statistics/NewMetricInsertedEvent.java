@@ -1,4 +1,4 @@
-package com.goodgame.profiling.graphite_bifroest.systems.rebuilder.statistics;
+package io.bifroest.bifroest.systems.rebuilder.statistics;
 
 public class NewMetricInsertedEvent {
 	

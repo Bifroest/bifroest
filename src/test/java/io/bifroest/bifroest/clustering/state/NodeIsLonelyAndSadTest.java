@@ -1,4 +1,4 @@
-package com.goodgame.profiling.graphite_bifroest.clustering.state;
+package io.bifroest.bifroest.clustering.state;
 
 import static org.hamcrest.CoreMatchers.instanceOf;
 import static org.hamcrest.CoreMatchers.is;
@@ -16,10 +16,10 @@ import java.util.Optional;
 import org.junit.Test;
 import org.mockito.Mock;
 
-import com.goodgame.profiling.bifroest.bifroest_client.metadata.ClusterState;
-import com.goodgame.profiling.bifroest.bifroest_client.metadata.NodeMetadata;
-import com.goodgame.profiling.bifroest.bifroest_client.seeds.HostPortPair;
-import com.goodgame.profiling.bifroest.bifroest_client.seeds.KnownClusterStateRequester;
+import io.bifroest.bifroest_client.metadata.ClusterState;
+import io.bifroest.bifroest_client.metadata.NodeMetadata;
+import io.bifroest.bifroest_client.seeds.HostPortPair;
+import io.bifroest.bifroest_client.seeds.KnownClusterStateRequester;
 
 public final class NodeIsLonelyAndSadTest extends NodeStateTestFixture {
     @Mock private KnownClusterStateRequester requester;

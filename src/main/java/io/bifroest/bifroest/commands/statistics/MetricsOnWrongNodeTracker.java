@@ -1,4 +1,4 @@
-package com.goodgame.profiling.graphite_bifroest.commands.statistics;
+package io.bifroest.bifroest.commands.statistics;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -7,10 +7,10 @@ import java.util.concurrent.atomic.LongAdder;
 import org.apache.commons.collections4.map.LazyMap;
 import org.kohsuke.MetaInfServices;
 
-import com.goodgame.profiling.commons.statistics.WriteToStorageEvent;
-import com.goodgame.profiling.commons.statistics.eventbus.EventBusManager;
-import com.goodgame.profiling.commons.statistics.gathering.StatisticGatherer;
-import com.goodgame.profiling.commons.statistics.storage.MetricStorage;
+import io.bifroest.commons.statistics.WriteToStorageEvent;
+import io.bifroest.commons.statistics.eventbus.EventBusManager;
+import io.bifroest.commons.statistics.gathering.StatisticGatherer;
+import io.bifroest.commons.statistics.storage.MetricStorage;
 
 @MetaInfServices
 public class MetricsOnWrongNodeTracker implements StatisticGatherer {

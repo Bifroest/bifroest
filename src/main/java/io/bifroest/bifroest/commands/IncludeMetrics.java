@@ -1,13 +1,9 @@
-package com.goodgame.profiling.graphite_bifroest.commands;
+package io.bifroest.bifroest.commands;
 
 import java.util.Collection;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-import org.apache.commons.collections4.Factory;
-import org.apache.commons.collections4.map.LazyMap;
 import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.commons.lang3.tuple.Pair;
 import org.apache.logging.log4j.LogManager;
@@ -16,19 +12,16 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.kohsuke.MetaInfServices;
 
-import com.goodgame.profiling.bifroest.bifroest_client.metadata.NodeMetadata;
-import com.goodgame.profiling.bifroest.bifroest_client.util.JSONClient;
-import com.goodgame.profiling.commons.model.Metric;
-import com.goodgame.profiling.commons.statistics.ProgramStateChanged;
-import com.goodgame.profiling.commons.statistics.SimpleProgramStateTracker;
-import com.goodgame.profiling.commons.systems.net.jsonserver.Command;
-import com.goodgame.profiling.graphite_bifroest.clustering.BifroestClustering;
-import com.goodgame.profiling.graphite_bifroest.clustering.EnvironmentWithClustering;
-import com.goodgame.profiling.graphite_bifroest.commands.statistics.DroppedMetricsEvent;
-import com.goodgame.profiling.graphite_bifroest.commands.statistics.ForwardedMetricsEvent;
-import com.goodgame.profiling.graphite_bifroest.metric_cache.EnvironmentWithMetricCache;
-import com.goodgame.profiling.graphite_bifroest.systems.BifroestIdentifiers;
-import com.goodgame.profiling.graphite_bifroest.systems.prefixtree.EnvironmentWithPrefixTree;
+import io.bifroest.bifroest_client.metadata.NodeMetadata;
+import io.bifroest.commons.model.Metric;
+import io.bifroest.commons.statistics.ProgramStateChanged;
+import io.bifroest.commons.statistics.SimpleProgramStateTracker;
+import io.bifroest.bifroest.clustering.BifroestClustering;
+import io.bifroest.bifroest.clustering.EnvironmentWithClustering;
+import io.bifroest.bifroest.metric_cache.EnvironmentWithMetricCache;
+import io.bifroest.bifroest.systems.BifroestIdentifiers;
+import io.bifroest.bifroest.systems.prefixtree.EnvironmentWithPrefixTree;
+import io.bifroest.commons.net.jsonserver.Command;
 
 @MetaInfServices
 public class IncludeMetrics<E extends EnvironmentWithPrefixTree & EnvironmentWithMetricCache & EnvironmentWithClustering> implements Command<E> {

@@ -1,4 +1,4 @@
-package com.goodgame.profiling.graphite_bifroest.systems;
+package io.bifroest.bifroest.systems;
 
 public class BifroestIdentifiers {
 

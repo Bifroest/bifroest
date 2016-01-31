@@ -1,4 +1,4 @@
-package com.goodgame.profiling.graphite_bifroest.clustering;
+package io.bifroest.bifroest.clustering;
 
 import java.util.Arrays;
 
@@ -6,12 +6,12 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.goodgame.profiling.bifroest.bifroest_client.metadata.PortMap;
-import com.goodgame.profiling.commons.util.json.JSONUtils;
-import com.goodgame.profiling.graphite_bifroest.commands.GetMetricSetCommand;
-import com.goodgame.profiling.graphite_bifroest.commands.GetSubMetricsCommand;
-import com.goodgame.profiling.graphite_bifroest.commands.GetValueCommand;
-import com.goodgame.profiling.graphite_bifroest.commands.IncludeMetrics;
+import io.bifroest.bifroest_client.metadata.PortMap;
+import io.bifroest.commons.util.json.JSONUtils;
+import io.bifroest.bifroest.commands.GetMetricSetCommand;
+import io.bifroest.bifroest.commands.GetSubMetricsCommand;
+import io.bifroest.bifroest.commands.GetValueCommand;
+import io.bifroest.bifroest.commands.IncludeMetrics;
 
 public final class BifroestPortmap implements PortMap {
     private int clusterPort;

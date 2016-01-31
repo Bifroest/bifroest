@@ -1,7 +1,7 @@
-package com.goodgame.profiling.graphite_bifroest.metric_cache.cache_strategy;
+package io.bifroest.bifroest.metric_cache.cache_strategy;
 
-import com.goodgame.profiling.commons.model.Interval;
-import com.goodgame.profiling.graphite_bifroest.metric_cache.CacheStrategy;
+import io.bifroest.commons.model.Interval;
+import io.bifroest.bifroest.metric_cache.CacheStrategy;
 
 public class NeverCacheStrategy implements CacheStrategy {
     @Override

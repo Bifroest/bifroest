@@ -1,8 +1,8 @@
-package com.goodgame.profiling.graphite_bifroest.systems.rebuilder.statistics;
+package io.bifroest.bifroest.systems.rebuilder.statistics;
 
 import java.time.Clock;
 
-import com.goodgame.profiling.commons.statistics.process.ProcessStartedEvent;
+import io.bifroest.commons.statistics.process.ProcessStartedEvent;
 
 public class RebuildStartedEvent extends ProcessStartedEvent {
 

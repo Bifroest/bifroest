@@ -1,4 +1,4 @@
-package com.goodgame.profiling.graphite_bifroest.systems.rebuilder;
+package io.bifroest.bifroest.systems.rebuilder;
 
 public interface TreeRebuilder {
 

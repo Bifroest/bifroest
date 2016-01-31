@@ -1,4 +1,4 @@
-package com.goodgame.profiling.graphite_bifroest.clustering.communication;
+package io.bifroest.bifroest.clustering.communication;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -19,12 +19,12 @@ import org.apache.logging.log4j.Logger;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import com.goodgame.profiling.bifroest.balancing.BucketMapping;
-import com.goodgame.profiling.bifroest.bifroest_client.metadata.ClusterState;
-import com.goodgame.profiling.bifroest.bifroest_client.metadata.NodeMetadata;
-import com.goodgame.profiling.graphite_bifroest.clustering.ClusteringCommandInterface;
-import com.goodgame.profiling.graphite_bifroest.clustering.statistics.AbandonedMetricsSentEvent;
-import com.goodgame.profiling.graphite_bifroest.clustering.statistics.TransferredMetricsSentEvent;
+import io.bifroest.balancing.BucketMapping;
+import io.bifroest.bifroest_client.metadata.ClusterState;
+import io.bifroest.bifroest_client.metadata.NodeMetadata;
+import io.bifroest.bifroest.clustering.ClusteringCommandInterface;
+import io.bifroest.bifroest.clustering.statistics.AbandonedMetricsSentEvent;
+import io.bifroest.bifroest.clustering.statistics.TransferredMetricsSentEvent;
 
 public final class SocketBasedClusterCommunication implements MutableClusterCommunication, ClientCommunication {
     private static final Logger log = LogManager.getLogger();

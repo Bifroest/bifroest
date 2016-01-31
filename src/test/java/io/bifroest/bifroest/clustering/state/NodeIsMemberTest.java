@@ -1,4 +1,4 @@
-package com.goodgame.profiling.graphite_bifroest.clustering.state;
+package io.bifroest.bifroest.clustering.state;
 
 import static org.hamcrest.Matchers.instanceOf;
 import static org.hamcrest.Matchers.is;
@@ -14,9 +14,9 @@ import java.io.IOException;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.goodgame.profiling.bifroest.balancing.BucketMapping;
-import com.goodgame.profiling.bifroest.balancing.KeepNeighboursMapping;
-import com.goodgame.profiling.bifroest.bifroest_client.metadata.NodeMetadata;
+import io.bifroest.balancing.BucketMapping;
+import io.bifroest.balancing.KeepNeighboursMapping;
+import io.bifroest.bifroest_client.metadata.NodeMetadata;
 
 public class NodeIsMemberTest extends NodeStateTestFixture {
     private NodeIsMember subject;

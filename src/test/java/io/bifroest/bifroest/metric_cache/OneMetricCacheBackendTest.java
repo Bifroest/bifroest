@@ -1,4 +1,4 @@
-package com.goodgame.profiling.graphite_bifroest.metric_cache;
+package io.bifroest.bifroest.metric_cache;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;

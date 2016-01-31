@@ -1,4 +1,4 @@
-package com.goodgame.profiling.graphite_bifroest.clustering.state;
+package io.bifroest.bifroest.clustering.state;
 
 import org.json.JSONArray;
 import org.json.JSONObject;

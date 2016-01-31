@@ -1,27 +1,43 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <description>Provides an efficient cassandra based storage for graphite</description>
   <modelVersion>4.0.0</modelVersion>
-  <artifactId>bifroest-bifroest</artifactId>
+
+  <groupId>io.bifroest</groupId>
+  <artifactId>bifroest</artifactId>
   <packaging>jar</packaging>
   <version>28.0.9-SNAPSHOT</version>
   
-  <parent>
-    <groupId>com.goodgame.profiling</groupId>
-    <artifactId>profiling-base</artifactId>
-    <version>3.0.0</version>
-  </parent>
-  
   <properties>
     <configDir>test/config</configDir>
-    <commonsVersion>26.9.1</commonsVersion>
-    <drainsVersion>1.0.8</drainsVersion>
-    <retentionsVersion>9.1.0</retentionsVersion>
-    <streamRewriterVersion>11.0.10</streamRewriterVersion>
-    <bifroestClientVersion>0.4.2</bifroestClientVersion>
-    <bifroestBalancingVersion>1.1.1</bifroestBalancingVersion>
+    <commonsVersion>26.9.2-SNAPSHOT</commonsVersion>
+    <drainsVersion>1.4.1-SNAPSHOT</drainsVersion>
+    <retentionsVersion>9.1.1-SNAPSHOT</retentionsVersion>
+    <streamRewriterVersion>13.0.4-SNAPSHOT</streamRewriterVersion>
+    <bifroestClientVersion>0.4.4-SNAPSHOT</bifroestClientVersion>
+    <bifroestBalancingVersion>1.1.2-SNAPSHOT</bifroestBalancingVersion>
+
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
   <dependencies>
+    <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.12</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.hamcrest</groupId>
+        <artifactId>hamcrest-all</artifactId>
+        <version>1.3</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.mockito</groupId>
+        <artifactId>mockito-all</artifactId>
+        <version>1.10.19</version>
+        <scope>test</scope>
+    </dependency>
     <!-- ################################################## -->
     <dependency>
         <groupId>org.json</groupId>
@@ -45,35 +61,35 @@
 
    <!-- ################################################## -->
     <dependency>
-        <groupId>com.goodgame.profiling</groupId>
-        <artifactId>profiling-commons</artifactId>
+        <groupId>io.bifroest</groupId>
+        <artifactId>commons</artifactId>
         <version>${commonsVersion}</version>
     </dependency>
 
     <!-- ################################################## -->
     <dependency>
-        <groupId>com.goodgame.profiling</groupId>
-        <artifactId>bifroest-drains</artifactId>
+        <groupId>io.bifroest</groupId>
+        <artifactId>drains</artifactId>
         <version>${drainsVersion}</version>
     </dependency>
     <dependency>
-        <groupId>com.goodgame.profiling</groupId>
-        <artifactId>bifroest-retentions</artifactId>
+        <groupId>io.bifroest</groupId>
+        <artifactId>retentions</artifactId>
         <version>${retentionsVersion}</version>
     </dependency>
     <dependency>
-        <groupId>com.goodgame.profiling</groupId>
-        <artifactId>bifroest-stream-rewriter</artifactId>
+        <groupId>io.bifroest</groupId>
+        <artifactId>stream-rewriter</artifactId>
         <version>${streamRewriterVersion}</version>
     </dependency>
     <dependency>
-        <groupId>com.goodgame.profiling</groupId>
-        <artifactId>bifroest-bifroest-client</artifactId>
+        <groupId>io.bifroest</groupId>
+        <artifactId>bifroest-client</artifactId>
         <version>${bifroestClientVersion}</version>
     </dependency>
     <dependency>
-        <groupId>com.goodgame.profiling</groupId>
-        <artifactId>bifroest-balancing-library</artifactId>
+        <groupId>io.bifroest</groupId>
+        <artifactId>balancing-library</artifactId>
         <version>${bifroestBalancingVersion}</version>
     </dependency>
 
@@ -85,7 +101,7 @@
 	<artifactId>exec-maven-plugin</artifactId>
 	<version>1.3.2</version>
 	<configuration>
-          <mainClass>com.goodgame.profiling.commons.GenericMain</mainClass>
+          <mainClass>io.bifroest.commons.GenericMain</mainClass>
           <systemProperties>
             <systemProperty>
               <key>log4j.configurationFile</key>
@@ -94,9 +110,36 @@
           </systemProperties>
           <arguments>
             <argument>${configDir}</argument>
-            <argument>com.goodgame.profiling.graphite_bifroest.systems.BifroestEnvironment</argument>
+            <argument>io.bifroest.systems.BifroestEnvironment</argument>
           </arguments>
         </configuration>
+      </plugin>
+      <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <configuration>
+              <compilerArgument>-Xlint:unchecked</compilerArgument>
+              <source>1.8</source>
+              <target>1.8</target>
+          </configuration>
+      </plugin>
+      <plugin>
+          <groupId>org.eluder.coveralls</groupId>
+          <artifactId>coveralls-maven-plugin</artifactId>
+          <version>4.1.0</version>
+      </plugin>
+      <plugin>
+          <groupId>org.jacoco</groupId>
+          <artifactId>jacoco-maven-plugin</artifactId>
+          <version>0.7.5.201505241946</version>
+          <executions>
+              <execution>
+                  <id>prepare-agent</id>
+                  <goals>
+                      <goal>prepare-agent</goal>
+                  </goals>
+              </execution>
+          </executions>
       </plugin>
     </plugins>
   </build>

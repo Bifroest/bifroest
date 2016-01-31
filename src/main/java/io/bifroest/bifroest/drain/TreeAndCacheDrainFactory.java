@@ -1,4 +1,4 @@
-package com.goodgame.profiling.graphite_bifroest.drain;
+package io.bifroest.bifroest.drain;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -7,10 +7,10 @@ import java.util.List;
 import org.json.JSONObject;
 import org.kohsuke.MetaInfServices;
 
-import com.goodgame.profiling.drains.BasicDrainFactory;
-import com.goodgame.profiling.drains.Drain;
-import com.goodgame.profiling.graphite_bifroest.systems.BifroestEnvironment;
-import com.goodgame.profiling.graphite_bifroest.systems.BifroestIdentifiers;
+import io.bifroest.drains.BasicDrainFactory;
+import io.bifroest.drains.Drain;
+import io.bifroest.bifroest.systems.BifroestEnvironment;
+import io.bifroest.bifroest.systems.BifroestIdentifiers;
 
 @MetaInfServices
 public class TreeAndCacheDrainFactory implements BasicDrainFactory<BifroestEnvironment> {
@@ -32,7 +32,7 @@ public class TreeAndCacheDrainFactory implements BasicDrainFactory<BifroestEnvir
     }
 
     @Override
-    public Drain create(BifroestEnvironment environment, JSONObject subconfiguration) {
+    public Drain create(BifroestEnvironment environment, JSONObject subconfiguration, String name) {
         return new TreeAndCacheDrain(environment);
     }
 

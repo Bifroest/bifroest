@@ -1,4 +1,4 @@
-package com.goodgame.profiling.graphite_bifroest.clustering;
+package io.bifroest.bifroest.clustering;
 
 import java.io.IOException;
 import java.net.InetAddress;
@@ -15,17 +15,17 @@ import org.apache.commons.lang3.concurrent.BasicThreadFactory;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.goodgame.profiling.bifroest.balancing.BucketMapping;
-import com.goodgame.profiling.bifroest.bifroest_client.metadata.ClusterState;
-import com.goodgame.profiling.bifroest.bifroest_client.metadata.NodeMetadata;
-import com.goodgame.profiling.bifroest.bifroest_client.metadata.PortMap;
-import com.goodgame.profiling.bifroest.bifroest_client.seeds.HostPortPair;
-import com.goodgame.profiling.graphite_bifroest.clustering.communication.MutableClusterCommunication;
-import com.goodgame.profiling.graphite_bifroest.clustering.communication.SocketBasedClusterCommunication;
-import com.goodgame.profiling.graphite_bifroest.clustering.state.NodeIsLonelyAndSad;
-import com.goodgame.profiling.graphite_bifroest.clustering.state.NodeState;
-import com.goodgame.profiling.graphite_bifroest.clustering.statistics.NodeStateChangedEvent;
-import com.goodgame.profiling.graphite_bifroest.metric_cache.MetricCache;
+import io.bifroest.balancing.BucketMapping;
+import io.bifroest.bifroest_client.metadata.ClusterState;
+import io.bifroest.bifroest_client.metadata.NodeMetadata;
+import io.bifroest.bifroest_client.metadata.PortMap;
+import io.bifroest.bifroest_client.seeds.HostPortPair;
+import io.bifroest.bifroest.clustering.communication.MutableClusterCommunication;
+import io.bifroest.bifroest.clustering.communication.SocketBasedClusterCommunication;
+import io.bifroest.bifroest.clustering.state.NodeIsLonelyAndSad;
+import io.bifroest.bifroest.clustering.state.NodeState;
+import io.bifroest.bifroest.clustering.statistics.NodeStateChangedEvent;
+import io.bifroest.bifroest.metric_cache.MetricCache;
 
 
 /**

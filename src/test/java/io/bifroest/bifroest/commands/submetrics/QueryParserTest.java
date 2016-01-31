@@ -1,4 +1,4 @@
-package com.goodgame.profiling.graphite_bifroest.commands.submetrics;
+package io.bifroest.bifroest.commands.submetrics;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -8,7 +8,7 @@ import java.util.List;
 
 import org.junit.Test;
 
-import com.goodgame.profiling.graphite_bifroest.commands.submetrics.QueryParser;
+import io.bifroest.bifroest.commands.submetrics.QueryParser;
 
 public class QueryParserTest {
 

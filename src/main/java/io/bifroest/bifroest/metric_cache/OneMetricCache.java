@@ -1,4 +1,4 @@
-package com.goodgame.profiling.graphite_bifroest.metric_cache;
+package io.bifroest.bifroest.metric_cache;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -8,11 +8,11 @@ import java.util.concurrent.locks.StampedLock;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.goodgame.profiling.commons.model.Interval;
-import com.goodgame.profiling.commons.model.Metric;
-import com.goodgame.profiling.graphite_bifroest.systems.BifroestEnvironment;
-import com.goodgame.profiling.graphite_retentions.Aggregator;
-import com.goodgame.profiling.graphite_retentions.MetricSet;
+import io.bifroest.commons.model.Interval;
+import io.bifroest.commons.model.Metric;
+import io.bifroest.bifroest.systems.BifroestEnvironment;
+import io.bifroest.retentions.Aggregator;
+import io.bifroest.retentions.MetricSet;
 
 public final class OneMetricCache {
     private static final int RETRY_COUNT = 5;

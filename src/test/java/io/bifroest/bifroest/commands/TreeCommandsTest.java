@@ -1,4 +1,4 @@
-package com.goodgame.profiling.graphite_bifroest.commands;
+package io.bifroest.bifroest.commands;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -16,12 +16,12 @@ import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-import com.goodgame.profiling.commons.systems.configuration.EnvironmentWithJSONConfiguration;
-import com.goodgame.profiling.commons.systems.configuration.JSONConfigurationLoader;
-import com.goodgame.profiling.commons.systems.net.jsonserver.Command;
-import com.goodgame.profiling.commons.util.json.JSONUtils;
-import com.goodgame.profiling.graphite_bifroest.systems.prefixtree.EnvironmentWithPrefixTree;
-import com.goodgame.profiling.graphite_bifroest.systems.prefixtree.PrefixTree;
+import io.bifroest.commons.util.json.JSONUtils;
+import io.bifroest.bifroest.systems.prefixtree.EnvironmentWithPrefixTree;
+import io.bifroest.bifroest.systems.prefixtree.PrefixTree;
+import io.bifroest.commons.configuration.EnvironmentWithJSONConfiguration;
+import io.bifroest.commons.configuration.JSONConfigurationLoader;
+import io.bifroest.commons.net.jsonserver.Command;
 
 public class TreeCommandsTest {
     private interface TestEnvironment extends EnvironmentWithPrefixTree, EnvironmentWithJSONConfiguration {

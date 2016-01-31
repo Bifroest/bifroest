@@ -1,8 +1,8 @@
-package com.goodgame.profiling.graphite_bifroest.clustering.statistics;
+package io.bifroest.bifroest.clustering.statistics;
 
 import java.util.Collection;
 
-import com.goodgame.profiling.commons.statistics.eventbus.EventBusManager;
+import io.bifroest.commons.statistics.eventbus.EventBusManager;
 
 public final class AbandonedMetricsReceivedEvent {
     private final long count;

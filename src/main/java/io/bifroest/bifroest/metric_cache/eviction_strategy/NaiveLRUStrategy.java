@@ -1,4 +1,4 @@
-package com.goodgame.profiling.graphite_bifroest.metric_cache.eviction_strategy;
+package io.bifroest.bifroest.metric_cache.eviction_strategy;
 
 import java.io.IOException;
 import java.io.OutputStreamWriter;
@@ -17,8 +17,8 @@ import org.apache.commons.collections4.map.LRUMap;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.goodgame.profiling.graphite_bifroest.metric_cache.EvictionStrategy;
-import com.goodgame.profiling.graphite_bifroest.metric_cache.LevelCache;
+import io.bifroest.bifroest.metric_cache.EvictionStrategy;
+import io.bifroest.bifroest.metric_cache.LevelCache;
 
 public class NaiveLRUStrategy implements EvictionStrategy {
     private static final Logger log = LogManager.getLogger();

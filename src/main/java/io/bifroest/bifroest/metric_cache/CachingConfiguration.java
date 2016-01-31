@@ -1,4 +1,4 @@
-package com.goodgame.profiling.graphite_bifroest.metric_cache;
+package io.bifroest.bifroest.metric_cache;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -8,9 +8,9 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.Optional;
 
-import com.goodgame.profiling.commons.systems.configuration.InvalidConfigurationException;
-import com.goodgame.profiling.graphite_retentions.RetentionConfiguration;
-import com.goodgame.profiling.graphite_retentions.RetentionLevel;
+import io.bifroest.commons.configuration.InvalidConfigurationException;
+import io.bifroest.retentions.RetentionConfiguration;
+import io.bifroest.retentions.RetentionLevel;
 
 public class CachingConfiguration {
     

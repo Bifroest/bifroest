@@ -1,4 +1,4 @@
-package com.goodgame.profiling.graphite_bifroest.clustering.state;
+package io.bifroest.bifroest.clustering.state;
 
 import static org.hamcrest.Matchers.instanceOf;
 import static org.hamcrest.Matchers.is;
@@ -15,7 +15,7 @@ import org.json.JSONObject;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.goodgame.profiling.bifroest.bifroest_client.metadata.NodeMetadata;
+import io.bifroest.bifroest_client.metadata.NodeMetadata;
 
 public class NodeIsLeaderTest extends NodeStateTestFixture {
     private NodeIsLeader subject;

@@ -1,22 +1,22 @@
-package com.goodgame.profiling.graphite_bifroest.systems;
+package io.bifroest.bifroest.systems;
 
 import java.nio.file.Path;
 
-import com.goodgame.profiling.commons.boot.InitD;
-import com.goodgame.profiling.commons.systems.common.AbstractCommonEnvironment;
-import com.goodgame.profiling.graphite_bifroest.clustering.BifroestClustering;
-import com.goodgame.profiling.graphite_bifroest.clustering.EnvironmentWithMutableClustering;
-import com.goodgame.profiling.graphite_bifroest.metric_cache.CachingConfiguration;
-import com.goodgame.profiling.graphite_bifroest.metric_cache.EnvironmentWithMutableMetricCache;
-import com.goodgame.profiling.graphite_bifroest.metric_cache.MetricCache;
-import com.goodgame.profiling.graphite_bifroest.systems.cassandra.CassandraAccessLayer;
-import com.goodgame.profiling.graphite_bifroest.systems.cassandra.EnvironmentWithMutableCassandra;
-import com.goodgame.profiling.graphite_bifroest.systems.prefixtree.EnvironmentWithMutablePrefixTree;
-import com.goodgame.profiling.graphite_bifroest.systems.prefixtree.PrefixTree;
-import com.goodgame.profiling.graphite_bifroest.systems.rebuilder.EnvironmentWithMutableTreeRebuilder;
-import com.goodgame.profiling.graphite_bifroest.systems.rebuilder.TreeRebuilder;
-import com.goodgame.profiling.graphite_retentions.RetentionConfiguration;
-import com.goodgame.profiling.graphite_retentions.bootloader.EnvironmentWithMutableRetentionStrategy;
+import io.bifroest.commons.boot.InitD;
+import io.bifroest.bifroest.clustering.BifroestClustering;
+import io.bifroest.bifroest.clustering.EnvironmentWithMutableClustering;
+import io.bifroest.bifroest.metric_cache.CachingConfiguration;
+import io.bifroest.bifroest.metric_cache.EnvironmentWithMutableMetricCache;
+import io.bifroest.bifroest.metric_cache.MetricCache;
+import io.bifroest.bifroest.systems.cassandra.CassandraAccessLayer;
+import io.bifroest.bifroest.systems.cassandra.EnvironmentWithMutableCassandra;
+import io.bifroest.bifroest.systems.prefixtree.EnvironmentWithMutablePrefixTree;
+import io.bifroest.bifroest.systems.prefixtree.PrefixTree;
+import io.bifroest.bifroest.systems.rebuilder.EnvironmentWithMutableTreeRebuilder;
+import io.bifroest.bifroest.systems.rebuilder.TreeRebuilder;
+import io.bifroest.commons.environment.AbstractCommonEnvironment;
+import io.bifroest.retentions.RetentionConfiguration;
+import io.bifroest.retentions.bootloader.EnvironmentWithMutableRetentionStrategy;
 
 public class BifroestEnvironment extends AbstractCommonEnvironment implements
         EnvironmentWithMutableCassandra,

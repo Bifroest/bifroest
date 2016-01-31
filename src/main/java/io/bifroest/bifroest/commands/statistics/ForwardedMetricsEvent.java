@@ -1,6 +1,6 @@
-package com.goodgame.profiling.graphite_bifroest.commands.statistics;
+package io.bifroest.bifroest.commands.statistics;
 
-import com.goodgame.profiling.commons.statistics.eventbus.EventBusManager;
+import io.bifroest.commons.statistics.eventbus.EventBusManager;
 
 public final class ForwardedMetricsEvent {
     private final String source;

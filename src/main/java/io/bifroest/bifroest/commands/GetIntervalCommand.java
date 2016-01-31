@@ -1,4 +1,4 @@
-package com.goodgame.profiling.graphite_bifroest.commands;
+package io.bifroest.bifroest.commands;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -8,9 +8,9 @@ import org.apache.commons.lang3.tuple.Pair;
 import org.json.JSONObject;
 import org.kohsuke.MetaInfServices;
 
-import com.goodgame.profiling.commons.boot.interfaces.Environment;
-import com.goodgame.profiling.commons.systems.net.jsonserver.Command;
-import com.goodgame.profiling.graphite_bifroest.systems.BifroestIdentifiers;
+import io.bifroest.commons.boot.interfaces.Environment;
+import io.bifroest.bifroest.systems.BifroestIdentifiers;
+import io.bifroest.commons.net.jsonserver.Command;
 
 @MetaInfServices
 public final class GetIntervalCommand< E extends Environment > implements Command<E> {

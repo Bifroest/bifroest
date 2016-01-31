@@ -1,6 +1,6 @@
-package com.goodgame.profiling.graphite_bifroest.systems.rebuilder;
+package io.bifroest.bifroest.systems.rebuilder;
 
-import com.goodgame.profiling.commons.boot.interfaces.Environment;
+import io.bifroest.commons.boot.interfaces.Environment;
 
 public interface EnvironmentWithTreeRebuilder extends Environment {
 

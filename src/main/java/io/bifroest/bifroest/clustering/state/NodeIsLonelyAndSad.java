@@ -1,4 +1,4 @@
-package com.goodgame.profiling.graphite_bifroest.clustering.state;
+package io.bifroest.bifroest.clustering.state;
 
 import java.io.IOException;
 import java.util.Collection;
@@ -8,15 +8,15 @@ import java.util.Optional;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.goodgame.profiling.bifroest.balancing.BucketMapping;
-import com.goodgame.profiling.bifroest.bifroest_client.metadata.ClusterState;
-import com.goodgame.profiling.bifroest.bifroest_client.metadata.NodeMetadata;
-import com.goodgame.profiling.bifroest.bifroest_client.seeds.HostPortPair;
-import com.goodgame.profiling.bifroest.bifroest_client.seeds.KnownClusterStateFromMultiServer;
-import com.goodgame.profiling.bifroest.bifroest_client.seeds.KnownClusterStateRequester;
-import com.goodgame.profiling.graphite_bifroest.clustering.ClusteringCommandInterface;
-import com.goodgame.profiling.graphite_bifroest.clustering.communication.MutableClusterCommunication;
-import com.goodgame.profiling.graphite_bifroest.metric_cache.MetricCache;
+import io.bifroest.balancing.BucketMapping;
+import io.bifroest.bifroest_client.metadata.ClusterState;
+import io.bifroest.bifroest_client.metadata.NodeMetadata;
+import io.bifroest.bifroest_client.seeds.HostPortPair;
+import io.bifroest.bifroest_client.seeds.KnownClusterStateFromMultiServer;
+import io.bifroest.bifroest_client.seeds.KnownClusterStateRequester;
+import io.bifroest.bifroest.clustering.ClusteringCommandInterface;
+import io.bifroest.bifroest.clustering.communication.MutableClusterCommunication;
+import io.bifroest.bifroest.metric_cache.MetricCache;
 
 /**
  * This state is before a node even tried to get find other

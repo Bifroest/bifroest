@@ -1,4 +1,4 @@
-package com.goodgame.profiling.graphite_bifroest.metric_cache.statistics;
+package io.bifroest.bifroest.metric_cache.statistics;
 
 public final class RaceConditionTriggeredEvent {
     private final String cacheName;

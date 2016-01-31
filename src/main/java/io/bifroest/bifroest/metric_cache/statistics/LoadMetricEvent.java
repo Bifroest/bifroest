@@ -1,6 +1,6 @@
-package com.goodgame.profiling.graphite_bifroest.metric_cache.statistics;
+package io.bifroest.bifroest.metric_cache.statistics;
 
-import com.goodgame.profiling.commons.statistics.eventbus.EventBusManager;
+import io.bifroest.commons.statistics.eventbus.EventBusManager;
 
 public final class LoadMetricEvent {
     private final String metric;

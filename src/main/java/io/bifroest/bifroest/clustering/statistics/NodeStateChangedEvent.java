@@ -1,7 +1,7 @@
-package com.goodgame.profiling.graphite_bifroest.clustering.statistics;
+package io.bifroest.bifroest.clustering.statistics;
 
-import com.goodgame.profiling.commons.statistics.eventbus.EventBusManager;
-import com.goodgame.profiling.graphite_bifroest.clustering.state.NodeState;
+import io.bifroest.commons.statistics.eventbus.EventBusManager;
+import io.bifroest.bifroest.clustering.state.NodeState;
 
 public final class NodeStateChangedEvent {
     private final String newState;

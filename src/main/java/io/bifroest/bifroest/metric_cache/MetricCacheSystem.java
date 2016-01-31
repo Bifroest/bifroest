@@ -1,4 +1,4 @@
-package com.goodgame.profiling.graphite_bifroest.metric_cache;
+package io.bifroest.bifroest.metric_cache;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -9,16 +9,16 @@ import org.json.JSONObject;
 import org.json.JSONArray;
 import org.kohsuke.MetaInfServices;
 
-import com.goodgame.profiling.commons.boot.interfaces.Subsystem;
-import com.goodgame.profiling.commons.systems.SystemIdentifiers;
-import com.goodgame.profiling.commons.systems.configuration.ConfigurationObserver;
-import com.goodgame.profiling.commons.systems.configuration.EnvironmentWithJSONConfiguration;
-import com.goodgame.profiling.commons.systems.configuration.InvalidConfigurationException;
-import com.goodgame.profiling.graphite_bifroest.systems.BifroestEnvironment;
-import com.goodgame.profiling.graphite_bifroest.systems.BifroestIdentifiers;
-import com.goodgame.profiling.graphite_bifroest.systems.cassandra.EnvironmentWithCassandra;
-import com.goodgame.profiling.graphite_retentions.RetentionConfiguration;
-import com.goodgame.profiling.graphite_retentions.bootloader.EnvironmentWithRetentionStrategy;
+import io.bifroest.commons.boot.interfaces.Subsystem;
+import io.bifroest.bifroest.systems.BifroestEnvironment;
+import io.bifroest.bifroest.systems.BifroestIdentifiers;
+import io.bifroest.bifroest.systems.cassandra.EnvironmentWithCassandra;
+import io.bifroest.commons.SystemIdentifiers;
+import io.bifroest.commons.configuration.ConfigurationObserver;
+import io.bifroest.commons.configuration.EnvironmentWithJSONConfiguration;
+import io.bifroest.commons.configuration.InvalidConfigurationException;
+import io.bifroest.retentions.RetentionConfiguration;
+import io.bifroest.retentions.bootloader.EnvironmentWithRetentionStrategy;
 
 @MetaInfServices
 public class MetricCacheSystem<E extends EnvironmentWithRetentionStrategy & EnvironmentWithJSONConfiguration & EnvironmentWithCassandra & EnvironmentWithMutableMetricCache>

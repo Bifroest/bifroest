@@ -1,4 +1,4 @@
-package com.goodgame.profiling.graphite_bifroest.metric_cache;
+package io.bifroest.bifroest.metric_cache;
 
 import static java.lang.Math.max;
 
@@ -38,17 +38,17 @@ import org.apache.commons.lang3.concurrent.BasicThreadFactory;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.goodgame.profiling.commons.model.Interval;
-import com.goodgame.profiling.commons.model.Metric;
-import com.goodgame.profiling.commons.statistics.ProgramStateChanged;
-import com.goodgame.profiling.commons.statistics.jmx.MBeanManager;
-import com.goodgame.profiling.commons.systems.configuration.InvalidConfigurationException;
-import com.goodgame.profiling.graphite_bifroest.metric_cache.eviction_strategy.NaiveLRUStrategy;
-import com.goodgame.profiling.graphite_bifroest.metric_cache.statistics.LoadMetricEvent;
-import com.goodgame.profiling.graphite_bifroest.systems.BifroestEnvironment;
-import com.goodgame.profiling.graphite_retentions.MetricSet;
-import com.goodgame.profiling.graphite_retentions.RetentionConfiguration;
-import com.goodgame.profiling.graphite_retentions.RetentionLevel;
+import io.bifroest.commons.model.Interval;
+import io.bifroest.commons.model.Metric;
+import io.bifroest.commons.statistics.ProgramStateChanged;
+import io.bifroest.commons.statistics.jmx.MBeanManager;
+import io.bifroest.bifroest.metric_cache.eviction_strategy.NaiveLRUStrategy;
+import io.bifroest.bifroest.metric_cache.statistics.LoadMetricEvent;
+import io.bifroest.bifroest.systems.BifroestEnvironment;
+import io.bifroest.commons.configuration.InvalidConfigurationException;
+import io.bifroest.retentions.MetricSet;
+import io.bifroest.retentions.RetentionConfiguration;
+import io.bifroest.retentions.RetentionLevel;
 
 public class MetricCache implements MetricCacheMBean{
     private static final Logger log = LogManager.getLogger();

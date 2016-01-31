@@ -1,7 +1,7 @@
-package com.goodgame.profiling.graphite_bifroest.commands;
+package io.bifroest.bifroest.commands;
 
-import com.goodgame.profiling.commons.statistics.ProgramStateChanged;
-import com.goodgame.profiling.commons.statistics.SimpleProgramStateTracker;
+import io.bifroest.commons.statistics.ProgramStateChanged;
+import io.bifroest.commons.statistics.SimpleProgramStateTracker;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -16,10 +16,10 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.kohsuke.MetaInfServices;
 
-import com.goodgame.profiling.commons.systems.configuration.EnvironmentWithJSONConfiguration;
-import com.goodgame.profiling.commons.systems.net.jsonserver.Command;
-import com.goodgame.profiling.graphite_bifroest.systems.BifroestIdentifiers;
-import com.goodgame.profiling.graphite_bifroest.systems.prefixtree.EnvironmentWithPrefixTree;
+import io.bifroest.bifroest.systems.BifroestIdentifiers;
+import io.bifroest.bifroest.systems.prefixtree.EnvironmentWithPrefixTree;
+import io.bifroest.commons.configuration.EnvironmentWithJSONConfiguration;
+import io.bifroest.commons.net.jsonserver.Command;
 
 @MetaInfServices
 public class GetAgeCommand< E extends EnvironmentWithJSONConfiguration & EnvironmentWithPrefixTree > implements Command<E> {

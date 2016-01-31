@@ -1,10 +1,10 @@
-package com.goodgame.profiling.graphite_bifroest.clustering.state;
+package io.bifroest.bifroest.clustering.state;
 
-import com.goodgame.profiling.bifroest.balancing.BucketMapping;
-import com.goodgame.profiling.bifroest.bifroest_client.metadata.ClusterState;
-import com.goodgame.profiling.bifroest.bifroest_client.metadata.NodeMetadata;
-import com.goodgame.profiling.bifroest.bifroest_client.metadata.MappingFactory;
-import com.goodgame.profiling.graphite_bifroest.metric_cache.MetricCache;
+import io.bifroest.balancing.BucketMapping;
+import io.bifroest.bifroest_client.metadata.ClusterState;
+import io.bifroest.bifroest_client.metadata.NodeMetadata;
+import io.bifroest.bifroest_client.metadata.MappingFactory;
+import io.bifroest.bifroest.metric_cache.MetricCache;
 
 /**
  * In this state, the current bifroest node has not found any other
