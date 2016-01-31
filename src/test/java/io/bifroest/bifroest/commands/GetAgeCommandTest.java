@@ -11,8 +11,8 @@ import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-import io.bifroest.bifroest.systems.prefixtree.EnvironmentWithPrefixTree;
-import io.bifroest.bifroest.systems.prefixtree.PrefixTree;
+import io.bifroest.bifroest.prefixtree.EnvironmentWithPrefixTree;
+import io.bifroest.bifroest.prefixtree.PrefixTree;
 import io.bifroest.commons.configuration.EnvironmentWithJSONConfiguration;
 import io.bifroest.commons.configuration.JSONConfigurationLoader;
 import io.bifroest.commons.net.jsonserver.Command;

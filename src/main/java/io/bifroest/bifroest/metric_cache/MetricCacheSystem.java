@@ -10,9 +10,9 @@ import org.json.JSONArray;
 import org.kohsuke.MetaInfServices;
 
 import io.bifroest.commons.boot.interfaces.Subsystem;
-import io.bifroest.bifroest.systems.BifroestEnvironment;
-import io.bifroest.bifroest.systems.BifroestIdentifiers;
-import io.bifroest.bifroest.systems.cassandra.EnvironmentWithCassandra;
+import io.bifroest.bifroest.BifroestEnvironment;
+import io.bifroest.bifroest.BifroestIdentifiers;
+import io.bifroest.bifroest.cassandra.EnvironmentWithCassandra;
 import io.bifroest.commons.SystemIdentifiers;
 import io.bifroest.commons.configuration.ConfigurationObserver;
 import io.bifroest.commons.configuration.EnvironmentWithJSONConfiguration;

@@ -11,9 +11,9 @@ import org.apache.logging.log4j.Logger;
 import org.json.JSONObject;
 import org.kohsuke.MetaInfServices;
 
-import io.bifroest.bifroest.systems.BifroestIdentifiers;
-import io.bifroest.bifroest.systems.prefixtree.EnvironmentWithPrefixTree;
-import io.bifroest.bifroest.systems.prefixtree.PrefixTree;
+import io.bifroest.bifroest.BifroestIdentifiers;
+import io.bifroest.bifroest.prefixtree.EnvironmentWithPrefixTree;
+import io.bifroest.bifroest.prefixtree.PrefixTree;
 import io.bifroest.commons.net.jsonserver.Command;
 
 @MetaInfServices

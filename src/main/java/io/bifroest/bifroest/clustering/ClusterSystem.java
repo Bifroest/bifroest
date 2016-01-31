@@ -17,7 +17,7 @@ import io.bifroest.bifroest_client.seeds.HostPortPair;
 import io.bifroest.commons.boot.interfaces.Subsystem;
 import io.bifroest.commons.statistics.units.parse.DurationParser;
 import io.bifroest.bifroest.metric_cache.EnvironmentWithMetricCache;
-import io.bifroest.bifroest.systems.BifroestIdentifiers;
+import io.bifroest.bifroest.BifroestIdentifiers;
 import io.bifroest.commons.SystemIdentifiers;
 
 

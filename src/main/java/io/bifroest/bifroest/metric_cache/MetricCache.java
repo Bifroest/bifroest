@@ -44,7 +44,7 @@ import io.bifroest.commons.statistics.ProgramStateChanged;
 import io.bifroest.commons.statistics.jmx.MBeanManager;
 import io.bifroest.bifroest.metric_cache.eviction_strategy.NaiveLRUStrategy;
 import io.bifroest.bifroest.metric_cache.statistics.LoadMetricEvent;
-import io.bifroest.bifroest.systems.BifroestEnvironment;
+import io.bifroest.bifroest.BifroestEnvironment;
 import io.bifroest.commons.configuration.InvalidConfigurationException;
 import io.bifroest.retentions.MetricSet;
 import io.bifroest.retentions.RetentionConfiguration;

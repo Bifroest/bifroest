@@ -19,7 +19,7 @@ import io.bifroest.commons.model.Interval;
 import io.bifroest.commons.model.Metric;
 import io.bifroest.commons.statistics.cache.CacheTracker;
 import io.bifroest.commons.statistics.jmx.MBeanManager;
-import io.bifroest.bifroest.systems.BifroestEnvironment;
+import io.bifroest.bifroest.BifroestEnvironment;
 import io.bifroest.retentions.MetricSet;
 import io.bifroest.retentions.RetentionLevel;
 

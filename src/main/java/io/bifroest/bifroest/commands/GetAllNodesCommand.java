@@ -9,8 +9,8 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.kohsuke.MetaInfServices;
 
-import io.bifroest.bifroest.systems.BifroestIdentifiers;
-import io.bifroest.bifroest.systems.prefixtree.EnvironmentWithPrefixTree;
+import io.bifroest.bifroest.BifroestIdentifiers;
+import io.bifroest.bifroest.prefixtree.EnvironmentWithPrefixTree;
 import io.bifroest.commons.net.jsonserver.Command;
 
 @MetaInfServices

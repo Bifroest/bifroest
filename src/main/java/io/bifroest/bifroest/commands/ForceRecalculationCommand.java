@@ -8,8 +8,8 @@ import org.apache.commons.lang3.tuple.Pair;
 import org.json.JSONObject;
 import org.kohsuke.MetaInfServices;
 
-import io.bifroest.bifroest.systems.BifroestIdentifiers;
-import io.bifroest.bifroest.systems.rebuilder.EnvironmentWithTreeRebuilder;
+import io.bifroest.bifroest.BifroestIdentifiers;
+import io.bifroest.bifroest.rebuilder.EnvironmentWithTreeRebuilder;
 import io.bifroest.commons.net.jsonserver.Command;
 
 @MetaInfServices

@@ -19,8 +19,8 @@ import io.bifroest.commons.statistics.DirectProgramStateTracker;
 import io.bifroest.commons.statistics.WriteToStorageEvent;
 import io.bifroest.commons.statistics.eventbus.EventBusManager;
 import io.bifroest.bifroest.commands.submetrics.QueryParser;
-import io.bifroest.bifroest.systems.BifroestIdentifiers;
-import io.bifroest.bifroest.systems.prefixtree.EnvironmentWithPrefixTree;
+import io.bifroest.bifroest.BifroestIdentifiers;
+import io.bifroest.bifroest.prefixtree.EnvironmentWithPrefixTree;
 import io.bifroest.commons.net.jsonserver.Command;
 
 @MetaInfServices

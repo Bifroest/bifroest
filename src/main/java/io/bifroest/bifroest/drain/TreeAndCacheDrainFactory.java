@@ -9,8 +9,8 @@ import org.kohsuke.MetaInfServices;
 
 import io.bifroest.drains.BasicDrainFactory;
 import io.bifroest.drains.Drain;
-import io.bifroest.bifroest.systems.BifroestEnvironment;
-import io.bifroest.bifroest.systems.BifroestIdentifiers;
+import io.bifroest.bifroest.BifroestEnvironment;
+import io.bifroest.bifroest.BifroestIdentifiers;
 
 @MetaInfServices
 public class TreeAndCacheDrainFactory implements BasicDrainFactory<BifroestEnvironment> {

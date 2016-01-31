@@ -11,7 +11,7 @@ import io.bifroest.commons.model.Metric;
 import io.bifroest.drains.AbstractBasicDrain;
 import io.bifroest.bifroest.clustering.BifroestClustering;
 import io.bifroest.bifroest.commands.statistics.DroppedMetricsEvent;
-import io.bifroest.bifroest.systems.BifroestEnvironment;
+import io.bifroest.bifroest.BifroestEnvironment;
 
 
 public class TreeAndCacheDrain extends AbstractBasicDrain {

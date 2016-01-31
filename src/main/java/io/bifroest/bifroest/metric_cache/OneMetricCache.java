@@ -10,7 +10,7 @@ import org.apache.logging.log4j.Logger;
 
 import io.bifroest.commons.model.Interval;
 import io.bifroest.commons.model.Metric;
-import io.bifroest.bifroest.systems.BifroestEnvironment;
+import io.bifroest.bifroest.BifroestEnvironment;
 import io.bifroest.retentions.Aggregator;
 import io.bifroest.retentions.MetricSet;
 

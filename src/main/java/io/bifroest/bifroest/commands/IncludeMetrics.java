@@ -19,8 +19,8 @@ import io.bifroest.commons.statistics.SimpleProgramStateTracker;
 import io.bifroest.bifroest.clustering.BifroestClustering;
 import io.bifroest.bifroest.clustering.EnvironmentWithClustering;
 import io.bifroest.bifroest.metric_cache.EnvironmentWithMetricCache;
-import io.bifroest.bifroest.systems.BifroestIdentifiers;
-import io.bifroest.bifroest.systems.prefixtree.EnvironmentWithPrefixTree;
+import io.bifroest.bifroest.BifroestIdentifiers;
+import io.bifroest.bifroest.prefixtree.EnvironmentWithPrefixTree;
 import io.bifroest.commons.net.jsonserver.Command;
 
 @MetaInfServices
