@@ -1,0 +1,31 @@
+language: java
+jdk:
+  - oraclejdk8
+before_install:
+  - git clone https://github.com/Bifroest/commons.git
+  - pushd commons
+  - mvn install
+  - popd
+  - git clone https://github.com/Bifroest/retentions.git
+  - pushd retentions
+  - mvn install
+  - popd
+  - git clone https://github.com/Bifroest/balancing.git
+  - pushd balancing
+  - mvn install
+  - popd
+  - git clone https://github.com/Bifroest/drains.git
+  - pushd drains
+  - mvn install
+  - popd
+  - git clone https://github.com/Bifroest/cluster-client.git
+  - pushd cluster-client
+  - mvn install
+  - popd
+  - git clone https://github.com/Bifroest/stream-rewriter.git
+  - pushd stream-rewriter
+  - mvn install
+  - popd
+after_success:
+  - mvn clean test jacoco:report coveralls:report
+
