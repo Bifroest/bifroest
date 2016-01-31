@@ -1,9 +1,14 @@
 package io.bifroest.bifroest.cassandra;
 
+import static org.hamcrest.Matchers.hasItem;
+import static org.hamcrest.Matchers.hasItems;
+import static org.hamcrest.Matchers.not;
+
 import io.bifroest.bifroest.cassandra.CassandraAccessLayer;
 import io.bifroest.bifroest.cassandra.CassandraDatabase;
 
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.anyString;
@@ -147,9 +152,9 @@ public class CassandraDatabaseWrapperTest {
     public void testLoadMetricsInOneTable() {
         initLoadMetrics( "name02", lvl1blk1, metric01, metric02 );
         List<Metric> metrics = loadMetrics( "name02", lvl1blk1 );
-        assertTrue( metrics.contains( metric01 ) );
-        assertTrue( metrics.contains( metric02 ) );
-        assertFalse( metrics.contains( metric03 ) );
+        
+        assertThat(metrics, hasItems(metric01, metric02));
+        assertThat(metrics, not(hasItem(metric03)));
     }
 
     @Test
@@ -157,9 +162,8 @@ public class CassandraDatabaseWrapperTest {
         initLoadMetrics( "name02", lvl1blk1, metric01, metric02 );
         initLoadMetrics( "name02", lvl1blk3, metric03 );
         List<Metric> metrics = loadMetrics( "name02", lvl1blk1, lvl1blk3 );
-        assertTrue( metrics.contains( metric01 ) );
-        assertTrue( metrics.contains( metric02 ) );
-        assertTrue( metrics.contains( metric03 ) );
+        
+        assertThat(metrics, hasItems(metric01, metric02, metric03));
     }
 
     @Test
@@ -167,8 +171,8 @@ public class CassandraDatabaseWrapperTest {
         initLoadMetrics( "name03", lvl1blk3, metric04 );
         initLoadMetrics( "name03", lvl2blk2, metric05 );
         List<Metric> metrics = loadMetrics( "name03", lvl1blk3, lvl2blk2 );
-        assertTrue( metrics.contains( metric04 ) );
-        assertTrue( metrics.contains( metric05 ) );
+        
+        assertThat(metrics, hasItems(metric04, metric05));
     }
 
     @Test
@@ -177,9 +181,8 @@ public class CassandraDatabaseWrapperTest {
         initLoadMetrics( "name05", dangling, metric07 );
         initLoadMetrics( "name05", lvl2blk1, metric08 );
         List<Metric> metrics = loadMetrics( "name05", lvl1blk1, dangling, lvl2blk1 );
-        assertTrue( metrics.contains( metric06 ) );
-        assertTrue( metrics.contains( metric07 ) );
-        assertTrue( metrics.contains( metric08 ) );
+        
+        assertThat(metrics, hasItems(metric06, metric07, metric08));
     }
 
     @Test
@@ -187,7 +190,7 @@ public class CassandraDatabaseWrapperTest {
         initLoadMetrics( "name06", dangling, metric09 );
         initLoadMetrics( "name06", lvl2blk1, metric10 );
         List<Metric> metrics = loadMetrics( "name06", dangling, lvl2blk1 );
-        assertTrue( metrics.contains( metric09 ) );
-        assertTrue( metrics.contains( metric10 ) );
+        
+        assertThat(metrics, hasItems(metric09, metric10));
     }
 }
