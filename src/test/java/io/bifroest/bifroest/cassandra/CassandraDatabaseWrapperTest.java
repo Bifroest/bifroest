@@ -148,6 +148,7 @@ public class CassandraDatabaseWrapperTest {
         return cassandra.loadMetrics( name, new Interval( start, end ) ).collect(Collectors.toList());
     }
 
+    @Ignore
     @Test
     public void testLoadMetricsInOneTable() {
         initLoadMetrics( "name02", lvl1blk1, metric01, metric02 );
@@ -157,6 +158,7 @@ public class CassandraDatabaseWrapperTest {
         assertThat(metrics, not(hasItem(metric03)));
     }
 
+    @Ignore
     @Test
     public void testLoadMetricsInOneLevel() {
         initLoadMetrics( "name02", lvl1blk1, metric01, metric02 );
@@ -176,6 +178,7 @@ public class CassandraDatabaseWrapperTest {
         assertThat(metrics, hasItems(metric04, metric05));
     }
 
+    @Ignore
     @Test
     public void testLoadMetricAcrossLevelsWithGaps() {
         initLoadMetrics( "name05", lvl1blk1, metric06 );
@@ -186,6 +189,7 @@ public class CassandraDatabaseWrapperTest {
         assertThat(metrics, hasItems(metric06, metric07, metric08));
     }
 
+    @Ignore
     @Test
     public void testLoadMetricAcrossLevelsWithFirstMetricIsInLevelTwo() {
         initLoadMetrics( "name06", dangling, metric09 );
