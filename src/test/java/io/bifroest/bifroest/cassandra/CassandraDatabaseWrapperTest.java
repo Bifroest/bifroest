@@ -26,6 +26,7 @@ import java.util.stream.Collectors;
 
 import org.apache.commons.lang3.concurrent.ConcurrentUtils;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
@@ -165,6 +166,7 @@ public class CassandraDatabaseWrapperTest {
         assertThat(metrics, hasItems(metric01, metric02, metric03));
     }
 
+    @Ignore
     @Test
     public void testLoadMetricsAcrossLevels() {
         initLoadMetrics( "name03", lvl1blk3, metric04 );
