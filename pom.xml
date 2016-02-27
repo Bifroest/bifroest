@@ -110,7 +110,7 @@
           </systemProperties>
           <arguments>
             <argument>${configDir}</argument>
-            <argument>io.bifroest.systems.BifroestEnvironment</argument>
+            <argument>io.bifroest.BifroestEnvironment</argument>
           </arguments>
         </configuration>
       </plugin>
